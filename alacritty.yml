@@ -1,0 +1,88 @@
+# alacritty config
+#
+# Nick Hanselman | nickhans
+#
+#
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+env:
+    TERM: xterm-256color
+
+# window config
+window:
+  padding:
+    x: 5
+    y: 7
+
+  decorations: buttonless
+background_opacity: 0.95
+
+# font config
+font:
+  normal:
+    family: Menlo
+    style: Regular
+  size: 12.0
+  offset:
+    x: 0
+    y: 2
+
+# allow copy by highlighting
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+# cursor config
+cursor:
+  style: Block
+
+# set shell
+shell:
+  program: /usr/local/bin/tmux
+  args:
+    - new-session
+    - -A
+    - -D
+    - -s
+    - main
+
+  #program: /opt/local/bin/fish
+  #args:
+    #- --login
+
+# allow urls to open with cmd-click
+mouse:
+  url:
+    launcher:
+        program: open
+    modifiers: Command
+
+# theme
+colors:
+  name: theme2
+  author: ""
+  primary:
+    background: "#000000"
+    foreground: "#ffffff"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"
+  normal:
+    black: "#191919"
+    red: "#eb3d51"
+    green: "#66b61a"
+    yellow: "#d98e1d"
+    blue: "#23ffa8"
+    magenta: "#ff00da"
+    cyan: "#68a783"
+    white: "#eaeaea"
+  bright:
+    black: "#484848"
+    red: "#be6262"
+    green: "#4b8a10"
+    yellow: "#e5d95e"
+    blue: "#23aaff"
+    magenta: "#ab005b"
+    cyan: "#bbcd81"
+    white: "#bbbbbb"
